@@ -1612,7 +1612,6 @@ html {
     text-decoration: line-through;
 }
 .catalog-hero {
-    /* Накладываем градиент поверх картинки, чтобы скрыть резкие края */
     background-image: 
         linear-gradient(to right, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 10%, rgba(10, 10, 10, 0) 25%, rgba(10, 10, 10, 0) 75%, rgba(10, 10, 10, 0.8) 90%, #0a0a0a 100%),
         url('img/catalog-bg.jpg');
@@ -1624,11 +1623,12 @@ html {
     height: 600px;
     width: 100%;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Отступ снизу, чтобы поиск не налезал */
+    
+    /* Убираем лишние абсолютные позиции, которые ломали поток */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     position: relative;
 }
 .catalog-hero::before {
