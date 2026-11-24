@@ -1613,16 +1613,19 @@ html {
 }
 .catalog-hero {
     background-image: url('img/catalog-bg.jpg'); /* Твоя картинка */
-    background-size: cover;
-    background-position: center;
-    height: 600px; 
+    background-size: cover;      /* Заполняет весь блок без искажений */
+    background-position: center; /* Центрирует картинку */
+    background-repeat: no-repeat;
+    height: 600px;               /* Высота блока (можешь изменить на 700px, если хочешь больше) */
     width: 100%;
     border-radius: 20px;
     margin-bottom: 40px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
-
 .catalog-hero::before {
     content: '';
     position: absolute;
