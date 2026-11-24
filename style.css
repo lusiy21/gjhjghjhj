@@ -1622,22 +1622,13 @@ html {
 }
 
 .catalog-hero {
-    background-image: url('img/dot.gif');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0a0a0a;
-    height: 600px;
+    /* ... твои старые стили ... */
+    height: 600px; /* Вот эта высота отвечает за размер! */
     width: 100%;
     border-radius: 20px;
     margin-bottom: 40px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-
-
 }
 
 .catalog-hero::before {
