@@ -161,7 +161,15 @@ html {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 20px;
 }
-
+.catalog-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
 .slider-caption .slide-btn {
     display: inline-block;
     padding: 14px 40px;
