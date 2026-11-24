@@ -1650,11 +1650,13 @@ html {
 
 .catalog-hero .catalog-title {
     margin-bottom: 0;
+    margin-top: 0; /* Убираем старый отступ сверху */
     text-shadow: 0 0 30px rgba(230, 57, 70, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8);
     color: #ffffff;
     font-size: 48px;
     font-weight: 800;
     letter-spacing: 4px;
+    text-align: center; /* Выравниваем текст по центру */
 }
 /* ПУСТОЙ КАТАЛОГ */
 .empty-catalog {
