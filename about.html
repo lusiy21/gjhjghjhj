@@ -30,7 +30,6 @@
         <h1 class="about-title">О НАС</h1>
 
         <div class="memory-photo-center">
-            <!-- Если фото Максима нет в папке img, эта картинка будет пустой, это нормально -->
             <img src="img/maxim.jpg" alt="Максим Спокойнич">
         </div>
 
@@ -44,20 +43,21 @@
             <p><strong>RizeFly</strong> основан в 2025 году в память о <strong>Максиме Спокойниче (Spokoynich)</strong> — преданном фанате Dota 2, коллекционере и просто хорошем человеке.</p>
             <p>Его любовь к игре, внимание к деталям и стремление окружать себя уникальными вещами вдохновили нас создать этот проект. Здесь вы найдёте качественный мерч, фигурки героев, ограниченные серии и атмосферу, которую Максим так ценил.</p>
             <p>Максим верил, что игры объединяют людей, а крутой мерч — это способ выразить свою любовь к вселенной Dota 2. Мы продолжаем его дело, создавая вещи, которые радуют фанатов по всему миру.</p>
+            <p>Каждый товар в нашем магазине — это маленькая частичка той магии, которую Максим чувствовал в каждой партии, каждом герое и каждом турнире. RizeFly — это не просто магазин, это место, где живёт память и настоящая любовь к Dota 2.</p>
         </div>
 
         <div class="about-cards">
             <div class="about-card">
                 <h3 class="about-card-title">Основание</h3>
-                <p class="about-card-text">RizeFly основан в 2025 году в память о Максиме Спокойниче (Spokoynich).</p>
+                <p class="about-card-text">RizeFly основан в 2025 году в память о Максиме Спокойниче (Spokoynich) — преданном фанате Dota 2, коллекционере и просто хорошем человеке.</p>
             </div>
             <div class="about-card">
                 <h3 class="about-card-title">Вдохновение</h3>
-                <p class="about-card-text">Его любовь к игре и стремление окружать себя уникальными вещами вдохновили нас на этот проект.</p>
+                <p class="about-card-text">Его любовь к игре, внимание к деталям и стремление окружать себя уникальными вещами вдохновили нас создать этот проект.</p>
             </div>
             <div class="about-card">
                 <h3 class="about-card-title">Наследие</h3>
-                <p class="about-card-text">Здесь вы найдёте качественный мерч, фигурки героев и атмосферу, которую Максим так ценил.</p>
+                <p class="about-card-text">Здесь вы найдёте качественный мерч, фигурки героев, ограниченные серии и атмосферу, которую Максим так ценил.</p>
             </div>
         </div>
 
@@ -94,48 +94,19 @@
     <div class="footer-overlay"></div>
     <div class="site-footer-inner">
         <div class="footer-grid">
-            <div class="footer-col">
-                <h4>RizeFly</h4>
-                <p>Интернет-магазин мерча и аксессуаров по мотивам Dota 2.</p>
-                <p>Создан в память о Максиме Спокойниче (Spokoynich).</p>
-            </div>
-            <div class="footer-col">
-                <h4>Навигация</h4>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Покупателям</h4>
-                <ul>
-                    <li><a href="cart.html">Корзина</a></li>
-                    <li><a href="wishlist.html">Избранное</a></li>
-                    <li><a href="login.html">Вход/Регистрация</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Контакты</h4>
-                <p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p>
-                <p><a href="mailto:info@rizefly.ru">info@rizefly.ru</a></p>
-            </div>
+            <div class="footer-col"><h4>RizeFly</h4><p>Интернет-магазин мерча и аксессуаров по мотивам Dota 2.</p><p>Создан в память о Максиме Спокойниче (Spokoynich).</p></div>
+            <div class="footer-col"><h4>Навигация</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+            <div class="footer-col"><h4>Покупателям</h4><ul><li><a href="cart.html">Корзина</a></li><li><a href="wishlist.html">Избранное</a></li><li><a href="login.html">Вход/Регистрация</a></li></ul></div>
+            <div class="footer-col"><h4>Контакты</h4><p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p><p><a href="mailto:info@rizefly.ru">info@rizefly.ru</a></p></div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 RizeFly. Все права защищены.</p>
-        </div>
+        <div class="footer-bottom"><p>© 2026 RizeFly. Все права защищены.</p></div>
     </div>
 </footer>
 
 <a href="#" class="scroll-top">↑</a>
 <script>
     let b = document.querySelector('.scroll-top');
-    window.onscroll = () => { 
-        if (window.scrollY > 300) b.style.display='flex'; else b.style.display='none'; 
-        const h=document.querySelector('.site-header'); 
-        if(window.scrollY>50)h.classList.add('scrolled'); else h.classList.remove('scrolled'); 
-    };
+    window.onscroll = () => { if (window.scrollY > 300) b.style.display='flex'; else b.style.display='none'; const h=document.querySelector('.site-header'); if(window.scrollY>50)h.classList.add('scrolled'); else h.classList.remove('scrolled'); };
     b.onclick = () => { window.scrollTo({top:0,behavior:'smooth'}); return false; };
 </script>
 </body>
