@@ -1,127 +1,125 @@
-<?php
-require_once 'config.php';
-include 'header.php';
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizeFly — Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/iconk.jpg">
+</head>
+<body>
 
-// Получаем нужные зип-худи для главной (id 39, 40, 41)
-$sql = "SELECT * FROM products WHERE id IN (39, 40, 41) ORDER BY id";
-$result = mysqli_query($connect, $sql);
-$products = $result ? mysqli_fetch_all($result, MYSQLI_ASSOC) : [];
-
-// Если товаров нет по этим id, берём последние 3
-if (empty($products)) {
-    $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 3";
-    $result = mysqli_query($connect, $sql);
-    $products = $result ? mysqli_fetch_all($result, MYSQLI_ASSOC) : [];
-}
-?>
+<header class="site-header">
+    <div class="site-header-inner">
+        <div class="logo"><a href="index.html" class="logo-link"><img src="img/logo.svg" alt="RizeFly" class="logo-img"></a></div>
+        <nav class="navigation">
+            <a href="index.html" class="nav_link">ГЛАВНАЯ</a>
+            <a href="catalog.html" class="nav_link">КАТАЛОГ</a>
+            <a href="about.html" class="nav_link">О НАС</a>
+            <a href="contacts.html" class="nav_link">КОНТАКТЫ</a>
+            <a href="cart.html" class="nav_link">КОРЗИНА</a>
+            <a href="wishlist.html" class="nav_link">ИЗБРАННОЕ</a>
+            <a href="profile.html" class="nav_link">ПРОФИЛЬ</a>
+            <a href="login.html" class="nav_link">ВХОД</a>
+        </nav>
+    </div>
+</header>
 
 <main class="main-content">
-    
-   <!-- СЛАЙДЕР -->
-<section class="slider-container">
-    <div class="slider-track">
-        <input type="radio" name="slider" id="slide1" class="slider-radio" checked>
-        <input type="radio" name="slider" id="slide2" class="slider-radio">
-        <input type="radio" name="slider" id="slide3" class="slider-radio">
-        
-        <div class="slider-slides">
-            <div class="slider-slide slide-1">
-                <a href="catalog.php">
-                    <img src="img/slide1.webp" alt="Новая коллекция">
-                </a>
-                <div class="slider-caption">
-                    <h2>Новая коллекция</h2>
-                    <a href="catalog.php" class="slide-btn">Смотреть →</a>
+
+    <section class="slider-container">
+        <div class="slider-track">
+            <input type="radio" name="slider" id="slide1" class="slider-radio" checked>
+            <input type="radio" name="slider" id="slide2" class="slider-radio">
+            <input type="radio" name="slider" id="slide3" class="slider-radio">
+
+            <div class="slider-slides">
+                <div class="slider-slide slide-1">
+                    <a href="catalog.html"><img src="img/slide1.webp" alt="Новая коллекция"></a>
+                    <div class="slider-caption">
+                        <h2>Новая коллекция</h2>
+                        <a href="catalog.html" class="slide-btn">Смотреть →</a>
+                    </div>
+                </div>
+                <div class="slider-slide slide-2">
+                    <a href="catalog.html"><img src="img/slide2.jpg" alt="Фигурки Dota 2"></a>
+                    <div class="slider-caption">
+                        <h2>Фигурки</h2>
+                        <a href="catalog.html" class="slide-btn">Смотреть →</a>
+                    </div>
+                </div>
+                <div class="slider-slide slide-3">
+                    <a href="catalog.html"><img src="img/slide3.png" alt="Аксессуары"></a>
+                    <div class="slider-caption">
+                        <h2>Аксессуары</h2>
+                        <a href="catalog.html" class="slide-btn">Смотреть →</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="slider-slide slide-2">
-                <a href="catalog.php">
-                    <img src="img/slide2.jpg" alt="Фигурки Dota 2">
-                </a>
-                <div class="slider-caption">
-                    <h2>Фигурки</h2>
-                    <a href="catalog.php" class="slide-btn">Смотреть →</a>
-                </div>
-            </div>
-            
-            <div class="slider-slide slide-3">
-                <a href="catalog.php">
-                    <img src="img/slide3.png" alt="Аксессуары">
-                </a>
-                <div class="slider-caption">
-                    <h2>Аксессуары</h2>
-                    <a href="catalog.php" class="slide-btn">Смотреть →</a>
-                </div>
+
+            <div class="slider-nav">
+                <label for="slide1" class="slider-nav-btn"></label>
+                <label for="slide2" class="slider-nav-btn"></label>
+                <label for="slide3" class="slider-nav-btn"></label>
             </div>
         </div>
-        
-        <div class="slider-nav">
-            <label for="slide1" class="slider-nav-btn"></label>
-            <label for="slide2" class="slider-nav-btn"></label>
-            <label for="slide3" class="slider-nav-btn"></label>
-        </div>
-    </div>
-</section>
-    
+    </section>
+
     <div class="bento-grid">
-        <div class="grid-item pic-1" onclick="location.href='catalog.php'">
-            <img src="img/footrub1.jpg" alt="Фото 1">
-        </div>
-        <div class="grid-item pic-2" onclick="location.href='catalog.php'">
-            <img src="img/mana1.jpg" alt="Фото 2">
-        </div>
-        <div class="grid-item pic-3" onclick="location.href='catalog.php'">
-            <img src="img/zipint1.jpg" alt="Фото 3">
-        </div>
-        <div class="grid-item pic-4" onclick="location.href='catalog.php'">
-            <img src="img/zipnever2.jpg" alt="Фото 4">
-        </div>
+        <div class="grid-item pic-1" onclick="location.href='catalog.html'"><img src="img/footrub1.jpg" alt="Фото 1"></div>
+        <div class="grid-item pic-2" onclick="location.href='catalog.html'"><img src="img/mana1.jpg" alt="Фото 2"></div>
+        <div class="grid-item pic-3" onclick="location.href='catalog.html'"><img src="img/zipint1.jpg" alt="Фото 3"></div>
+        <div class="grid-item pic-4" onclick="location.href='catalog.html'"><img src="img/zipnever2.jpg" alt="Фото 4"></div>
     </div>
 
-    <!-- ПОПУЛЯРНЫЕ ТОВАРЫ (ЗИП-ХУДИ 39, 40, 41) -->
-<section class="products-section">
-    <div class="section-header">
-        <h2 class="section-title">Популярные товары</h2>
-        <a href="catalog.php" class="section-link">Все товары →</a>
-    </div>
-    
-    <div class="products-grid">
-        <?php foreach ($products as $product): 
-            $images_arr = json_decode($product['images'], true);
-            $second_img = (!empty($images_arr) && isset($images_arr[1])) ? $images_arr[1] : '';
-        ?>
-        <div class="product-card">
-            <div class="product-card-img-wrapper">
-                <img class="front-img" src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
-                <?php if ($second_img): ?>
-                    <img class="hover-img" src="<?= htmlspecialchars($second_img) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
-                <?php endif; ?>
+    <section class="products-section">
+        <div class="section-header">
+            <h2 class="section-title">Популярные товары</h2>
+            <a href="catalog.html" class="section-link">Все товары →</a>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-card-img-wrapper">
+                    <img class="front-img" src="img/zipspec.png" alt="Зип-худи Спектрал Фантом">
+                    <img class="hover-img" src="img/zipspec1.png" alt="Зип-худи Спектрал Фантом">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Спектрал Фантом»</h3>
+                    <div class="product-card-price"><span class="current">5 900 ₽</span></div>
+                </div>
             </div>
-            <div class="product-card-info" onclick="location.href='product.php?id=<?= $product['id'] ?>'">
-                <h3><?= htmlspecialchars($product['name']) ?></h3>
-                <div class="product-card-price">
-                    <span class="current"><?= number_format($product['price'], 0, '', ' ') ?> ₽</span>
-                    <!-- СТАРАЯ ЦЕНА УБРАНА -->
+            <div class="product-card">
+                <div class="product-card-img-wrapper">
+                    <img class="front-img" src="img/zipenigm.png" alt="Зип-худи Энигма">
+                    <img class="hover-img" src="img/zipenigm1.png" alt="Зип-худи Энигма">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Энигма»</h3>
+                    <div class="product-card-price"><span class="current">6 200 ₽</span></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card-img-wrapper">
+                    <img class="front-img" src="img/zipmorph.png" alt="Зип-худи Эзериал Морф">
+                    <img class="hover-img" src="img/zipmorph1.png" alt="Зип-худи Эзериал Морф">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Эзериал Морф»</h3>
+                    <div class="product-card-price"><span class="current">6 500 ₽</span></div>
                 </div>
             </div>
         </div>
-        <?php endforeach; ?>
-    </div>
-</section>
+    </section>
 
-    <!-- АКЦИИ (С ЗАГОЛОВКОМ) -->
     <section class="promo-section">
-        <div class="container">
-            <h2 class="promo-section-title">Акции</h2>
-        </div>
+        <div class="container"><h2 class="promo-section-title">Акции</h2></div>
         <div class="promo-banner" style="background-image: url('img/promo.webp'); background-size: cover; background-position: center;">
             <div class="promo-overlay"></div>
             <div class="promo-content">
                 <div class="promo-tag">HOT!</div>
                 <h3 class="promo-title">Скидка 20%</h3>
                 <p class="promo-text">На все худи при заказе от 5000 ₽</p>
-                <a href="catalog.php" class="promo-btn">В каталог →</a>
+                <a href="catalog.html" class="promo-btn">В каталог →</a>
             </div>
         </div>
     </section>
@@ -129,25 +127,65 @@ if (empty($products)) {
     <div class="features-container">
         <div class="feature-card card-1">
             <h3 class="card-title">Эксклюзивность</h3>
-            <p class="card-text">
-                Наши товары отличаются уникальным дизайном и ограниченными тиражами. Каждая вещь создана для тех, кто ценит индивидуальность.
-            </p>
+            <p class="card-text">Наши товары отличаются уникальным дизайном и ограниченными тиражами. Каждая вещь создана для тех, кто ценит индивидуальность.</p>
         </div>
-
         <div class="feature-card card-2">
             <h3 class="card-title">Качество</h3>
-            <p class="card-text">
-                Только лучшие материалы и тщательный контроль на каждом этапе производства. Наши вещи служат долго и радуют владельцев.
-            </p>
+            <p class="card-text">Только лучшие материалы и тщательный контроль на каждом этапе производства. Наши вещи служат долго и радуют владельцев.</p>
         </div>
-
         <div class="feature-card card-3">
             <h3 class="card-title">Частое пополнение</h3>
-            <p class="card-text">
-                Регулярные релизы новых коллекций и эксклюзивных моделей. Следите за обновлениями, чтобы не пропустить свежие поступления.
-            </p>
+            <p class="card-text">Регулярные релизы новых коллекций и эксклюзивных моделей. Следите за обновлениями, чтобы не пропустить свежие поступления.</p>
         </div>
     </div>
 </main>
 
-<?php include 'footer.php'; ?>
+<footer class="site-footer">
+    <div class="footer-overlay"></div>
+    <div class="site-footer-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>RizeFly</h4>
+                <p>Интернет-магазин мерча и аксессуаров по мотивам Dota 2.</p>
+                <p>Создан в память о Максиме Спокойниче (Spokoynich).</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="wishlist.html">Избранное</a></li>
+                    <li><a href="login.html">Вход/Регистрация</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p>
+                <p><a href="mailto:info@rizefly.ru">info@rizefly.ru</a></p>
+                <p>Telegram: @rizefly</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 RizeFly. Все права защищены.</p></div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top">↑</a>
+<script>
+    let btn = document.querySelector('.scroll-top');
+    window.onscroll = function() {
+        if (window.scrollY > 300) btn.style.display = 'flex'; else btn.style.display = 'none';
+        const h = document.querySelector('.site-header');
+        if (window.scrollY > 50) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    };
+    btn.onclick = function() { window.scrollTo({top:0,behavior:'smooth'}); return false; };
+</script>
+</body>
+</html>
