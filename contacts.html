@@ -1,0 +1,102 @@
+<?php
+require_once 'config.php';
+include 'header.php';
+
+// Получаем сообщения из сессии
+$msg_sent = isset($_SESSION['msg_sent']) ? $_SESSION['msg_sent'] : '';
+$msg_error = isset($_SESSION['msg_error']) ? $_SESSION['msg_error'] : '';
+unset($_SESSION['msg_sent'], $_SESSION['msg_error']);
+?>
+
+<section class="contacts-page">
+    <div class="container">
+        <div class="contacts-hero">
+            <div class="contacts-hero-content">
+                <h1 class="contacts-title">КОНТАКТЫ</h1>
+            </div>
+        </div>
+        
+        <div class="contacts-wrapper">
+            <!-- ЛЕВАЯ КОЛОНКА: ИНФОРМАЦИЯ И ФОРМА -->
+            <div class="contacts-info">
+                <div class="info-block">
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Мясницкая, 13</p>
+                    <p>м. Чистые пруды / Лубянка / Тургеневская</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Телефон</h3>
+                    <p>+7 (800) 555-35-35</p>
+                    <p>+7 (495) 123-45-67</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Email</h3>
+                    <p>info@rizefly.ru</p>
+                    <p>support@rizefly.ru</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Режим работы</h3>
+                    <p>Пн-Пт: 10:00 - 20:00</p>
+                    <p>Сб-Вс: 11:00 - 18:00</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Социальные сети</h3>
+                    <p>Telegram: <a href="https://t.me/rizefly" target="_blank">@rizefly</a></p>
+                    <p>VK: <a href="https://vk.com/rizefly" target="_blank">vk.com/rizefly</a></p>
+                </div>
+
+                <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
+                <div class="contact-form">
+                    <h3>Написать нам</h3>
+                    
+                    <?php if ($msg_sent): ?>
+                        <div class="msg-success">
+                            <?= htmlspecialchars($msg_sent) ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <?php if ($msg_error): ?>
+                        <div class="msg-error">
+                            <?= htmlspecialchars($msg_error) ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <form action="sendmessage.php" method="POST">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Ваш Email" required>
+                        <textarea name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="submit-btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: КАРТА -->
+            <div class="contacts-map">
+                <h3>Мы на карте</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.5564999999997!2d37.630277!3d55.759722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b1234567%3A0x5a7a24804bc7361c!2z0JzRj9GB0L3QuNGG0LrQsNGPINGD0LsuLCAxNSwg0JzQvtGB0LrQstCwLCAxMDEwMDA!5e0!3m2!1sru!2sru!4v1778088931338!5m2!1sru!2sru" 
+                        width="100%" 
+                        height="350" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p class="map-caption">г. Москва, ул. Мясницкая, 13</p>
+                
+                <div class="map-info">
+                    <p><strong>Как добраться:</strong></p>
+                    <p>Метро: Чистые пруды / Лубянка / Тургеневская (выход к ул. Мясницкая)</p>
+                    <p>Автобусы: № М3, 122, 144 до остановки «Мясницкая улица»</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>

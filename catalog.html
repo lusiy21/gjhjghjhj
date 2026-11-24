@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizeFly — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/iconk.jpg">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <div class="logo"><a href="index.html" class="logo-link"><img src="img/logo.svg" alt="RizeFly" class="logo-img"></a></div>
+        <nav class="navigation">
+            <a href="index.html" class="nav_link">ГЛАВНАЯ</a>
+            <a href="catalog.html" class="nav_link">КАТАЛОГ</a>
+            <a href="about.html" class="nav_link">О НАС</a>
+            <a href="contacts.html" class="nav_link">КОНТАКТЫ</a>
+            <a href="cart.html" class="nav_link">КОРЗИНА</a>
+            <a href="wishlist.html" class="nav_link">ИЗБРАННОЕ</a>
+            <a href="profile.html" class="nav_link">ПРОФИЛЬ</a>
+            <a href="login.html" class="nav_link">ВХОД</a>
+        </nav>
+    </div>
+</header>
+
+<section class="catalog-page">
+    <div class="container">
+        <div class="catalog-hero">
+            <div class="catalog-hero-content"><h1 class="catalog-title">КАТАЛОГ</h1></div>
+        </div>
+
+        <div class="search-box">
+            <form onsubmit="applyFilters(); return false;">
+                <input type="text" id="searchInput" placeholder="Поиск товаров...">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+
+        <div class="filter-row">
+            <button class="filter-toggle-btn" id="filterToggleBtn">ФИЛЬТР</button>
+        </div>
+
+        <div class="products-container" id="productsContainer">
+            <!-- ХУДИ -->
+            <div class="product-card" data-category="1" data-price="5800" data-name="Зип-худи Nevermore">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/zipnever.png" alt="Зип-худи Nevermore">
+                    <img class="hover-img" src="img/zipnever0.png" alt="Зип-худи Nevermore">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Nevermore»</h3>
+                    <div class="product-card-price"><span class="current">5 800 ₽</span><span class="old">6 800 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="1" data-price="7500" data-name="Зип-худи The International">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/zipint.png" alt="Зип-худи The International">
+                    <img class="hover-img" src="img/zipint1.jpg" alt="Зип-худи The International">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «The International»</h3>
+                    <div class="product-card-price"><span class="current">7 500 ₽</span><span class="old">8 500 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="1" data-price="5900" data-name="Зип-худи Спектрал Фантом">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/zipspec.png" alt="Зип-худи Спектрал Фантом">
+                    <img class="hover-img" src="img/zipspec1.png" alt="Зип-худи Спектрал Фантом">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Спектрал Фантом»</h3>
+                    <div class="product-card-price"><span class="current">5 900 ₽</span><span class="old">6 900 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="1" data-price="6200" data-name="Зип-худи Энигма">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/zipenigm.png" alt="Зип-худи Энигма">
+                    <img class="hover-img" src="img/zipenigm1.png" alt="Зип-худи Энигма">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Энигма»</h3>
+                    <div class="product-card-price"><span class="current">6 200 ₽</span><span class="old">7 200 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="1" data-price="6500" data-name="Зип-худи Эзериал Морф">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/zipmorph.png" alt="Зип-худи Эзериал Морф">
+                    <img class="hover-img" src="img/zipmorph1.png" alt="Зип-худи Эзериал Морф">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Зип-худи «Эзериал Морф»</h3>
+                    <div class="product-card-price"><span class="current">6 500 ₽</span><span class="old">7 500 ₽</span></div>
+                </div>
+            </div>
+
+            <!-- ФУТБОЛКИ -->
+            <div class="product-card" data-category="2" data-price="2490" data-name="Футболка Rubik">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/footrub.png" alt="Футболка Rubik">
+                    <img class="hover-img" src="img/footrub1.jpg" alt="Футболка Rubik">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Футболка Rubik</h3>
+                    <div class="product-card-price"><span class="current">2 490 ₽</span><span class="old">2 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="2" data-price="2990" data-name="Футболка Morph feat avice">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/csv.png" alt="Футболка Morph">
+                    <img class="hover-img" src="img/csv1.png" alt="Футболка Morph">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Футболка Morph (feat. avice)</h3>
+                    <div class="product-card-price"><span class="current">2 990 ₽</span><span class="old">3 490 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="2" data-price="2690" data-name="Футболка Mana Burn">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/mana.png" alt="Футболка Mana Burn">
+                    <img class="hover-img" src="img/mana1.jpg" alt="Футболка Mana Burn">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Футболка Mana Burn</h3>
+                    <div class="product-card-price"><span class="current">2 690 ₽</span><span class="old">3 190 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="2" data-price="2990" data-name="Футболка Avice">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper clothing">
+                    <img class="front-img" src="img/avice.png" alt="Футболка Avice">
+                    <img class="hover-img" src="img/avice1.png" alt="Футболка Avice">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Футболка Avice</h3>
+                    <div class="product-card-price"><span class="current">2 990 ₽</span><span class="old">3 590 ₽</span></div>
+                </div>
+            </div>
+
+            <!-- ФИГУРКИ -->
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Phantom Assassin">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/pa.jpg" alt="Phantom Assassin"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Phantom Assassin</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Faceless Void">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/void.jpg" alt="Faceless Void"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Faceless Void</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Anti-Mage">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/am.jpg" alt="Anti-Mage"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Anti-Mage</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Juggernaut">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/jugg.jpg" alt="Juggernaut"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Juggernaut</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Axe">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/axe.jpg" alt="Axe"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Axe</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Phantom Lancer">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/pl.jpg" alt="Phantom Lancer"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Phantom Lancer</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="3" data-price="8900" data-name="Фигурка Luna">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper figurine"><img class="front-img" src="img/luna.jpg" alt="Luna"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Фигурка Luna</h3>
+                    <div class="product-card-price"><span class="current">8 900 ₽</span><span class="old">10 990 ₽</span></div>
+                </div>
+            </div>
+
+            <!-- AEGIS -->
+            <div class="product-card" data-category="4" data-price="3500" data-name="Aegis TI 2017">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper aegis">
+                    <img class="front-img" src="img/ae2017.jpg" alt="Aegis 2017">
+                    <img class="hover-img" src="img/ae20171.jpg" alt="Aegis 2017">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>DOTA 2 TI 2017 Aegis Shield</h3>
+                    <div class="product-card-price"><span class="current">3 500 ₽</span><span class="old">4 500 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="4" data-price="3800" data-name="Aegis TI 2019">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper aegis">
+                    <img class="front-img" src="img/ae2019.jpg" alt="Aegis 2019">
+                    <img class="hover-img" src="img/ae20191.jpg" alt="Aegis 2019">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>DOTA 2 TI 2019 Aegis Shield</h3>
+                    <div class="product-card-price"><span class="current">3 800 ₽</span><span class="old">4 800 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="4" data-price="3800" data-name="Aegis TI 2020">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper aegis">
+                    <img class="front-img" src="img/ae2020.jpg" alt="Aegis 2020">
+                    <img class="hover-img" src="img/ae20201.jpg" alt="Aegis 2020">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>DOTA 2 TI 2020 Aegis Shield</h3>
+                    <div class="product-card-price"><span class="current">3 800 ₽</span><span class="old">4 800 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="4" data-price="4200" data-name="Aegis TI 2023">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper aegis">
+                    <img class="front-img" src="img/ae2023.jpg" alt="Aegis 2023">
+                    <img class="hover-img" src="img/ae20231.jpg" alt="Aegis 2023">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>DOTA 2 TI 2023 Aegis Shield</h3>
+                    <div class="product-card-price"><span class="current">4 200 ₽</span><span class="old">5 200 ₽</span></div>
+                </div>
+            </div>
+
+            <!-- АКСЕССУАРЫ -->
+            <div class="product-card" data-category="5" data-price="2500" data-name="Custom Keycap">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory">
+                    <img class="front-img" src="img/keycap.jpg" alt="Keycap">
+                    <img class="hover-img" src="img/keycap1.jpg" alt="Keycap">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Custom Keycap</h3>
+                    <div class="product-card-price"><span class="current">2 500 ₽</span><span class="old">3 000 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="1800" data-name="Коврик Мортред">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory"><img class="front-img" src="img/kovrik.png" alt="Коврик Мортред"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Коврик «Мортред»</h3>
+                    <div class="product-card-price"><span class="current">1 800 ₽</span><span class="old">2 200 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="1800" data-name="Коврик Ланая">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory"><img class="front-img" src="img/kovriklan.png" alt="Коврик Ланая"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Коврик «Ланая»</h3>
+                    <div class="product-card-price"><span class="current">1 800 ₽</span><span class="old">2 200 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="1200" data-name="Кружка PUDGE">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory"><img class="front-img" src="img/kruzhk.jpg" alt="Кружка PUDGE"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Кружка «PUDGE»</h3>
+                    <div class="product-card-price"><span class="current">1 200 ₽</span><span class="old">1 500 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="500" data-name="Сумка YOKAI">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory">
+                    <img class="front-img" src="img/bag.jpg" alt="Сумка YOKAI">
+                    <img class="hover-img" src="img/bag1.jpg" alt="Сумка YOKAI">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Сумка YOKAI</h3>
+                    <div class="product-card-price"><span class="current">500 ₽</span><span class="old">700 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="3200" data-name="Кулон Blade Mail">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory">
+                    <img class="front-img" src="img/kulon.jpg" alt="Кулон Blade Mail">
+                    <img class="hover-img" src="img/kulon1.jpg" alt="Кулон Blade Mail">
+                </div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Кулон «Blade Mail»</h3>
+                    <div class="product-card-price"><span class="current">3 200 ₽</span><span class="old">4 000 ₽</span></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="5" data-price="3500" data-name="Подвеска Morph">
+                <div class="product-buttons"><a href="cart.html" class="cart-btn">🛒</a><a href="wishlist.html" class="wishlist-btn">🤍</a></div>
+                <div class="product-card-img-wrapper accessory"><img class="front-img" src="img/morph.png" alt="Подвеска Morph"></div>
+                <div class="product-card-info" onclick="location.href='product.html'">
+                    <h3>Подвеска Morph</h3>
+                    <div class="product-card-price"><span class="current">3 500 ₽</span><span class="old">4 500 ₽</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ФИЛЬТР-САЙДБАР -->
+<div class="filter-sidebar-overlay" id="filterSidebar">
+    <div class="filter-sidebar">
+        <div class="filter-sidebar-header">
+            <h3>ФИЛЬТРЫ</h3>
+            <button class="filter-close" id="filterCloseBtn"></button>
+        </div>
+        <div class="filter-sidebar-content">
+            <div class="filter-group">
+                <div class="filter-group-header"><span>Сортировка по цене</span><span class="filter-arrow"></span></div>
+                <div class="filter-group-body">
+                    <button type="button" data-sort="default" class="sort-btn">По умолчанию</button>
+                    <button type="button" data-sort="asc" class="sort-btn">По возрастанию</button>
+                    <button type="button" data-sort="desc" class="sort-btn">По убыванию</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-group-header"><span>Категория</span><span class="filter-arrow"></span></div>
+                <div class="filter-group-body">
+                    <label class="filter-checkbox"><input type="checkbox" value="1" class="cat-checkbox"> Худи</label>
+                    <label class="filter-checkbox"><input type="checkbox" value="2" class="cat-checkbox"> Футболки</label>
+                    <label class="filter-checkbox"><input type="checkbox" value="3" class="cat-checkbox"> Фигурки</label>
+                    <label class="filter-checkbox"><input type="checkbox" value="4" class="cat-checkbox"> Aegis</label>
+                    <label class="filter-checkbox"><input type="checkbox" value="5" class="cat-checkbox"> Аксессуары</label>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="filter-apply" id="applyFiltersBtn">Применить</button>
+                <button class="filter-reset" id="resetFilters">Сбросить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-overlay"></div>
+    <div class="site-footer-inner">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>RizeFly</h4><p>Интернет-магазин мерча и аксессуаров по мотивам Dota 2.</p><p>Создан в память о Максиме Спокойниче (Spokoynich).</p></div>
+            <div class="footer-col"><h4>Навигация</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+            <div class="footer-col"><h4>Покупателям</h4><ul><li><a href="cart.html">Корзина</a></li><li><a href="wishlist.html">Избранное</a></li><li><a href="login.html">Вход/Регистрация</a></li></ul></div>
+            <div class="footer-col"><h4>Контакты</h4><p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p><p><a href="mailto:info@rizefly.ru">info@rizefly.ru</a></p><p>Discord: rizefly</p><p>Telegram: @rizefly</p><p>VK: vk.com/rizefly</p></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 RizeFly. Все права защищены.</p></div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top">↑</a>
+
+<script>
+    // === Открытие/закрытие фильтров ===
+    const filterSidebar = document.getElementById('filterSidebar');
+    document.getElementById('filterToggleBtn').onclick = () => filterSidebar.classList.add('active');
+    document.getElementById('filterCloseBtn').onclick = () => filterSidebar.classList.remove('active');
+    filterSidebar.onclick = (e) => { if (e.target === filterSidebar) filterSidebar.classList.remove('active'); };
+
+    // Раскрытие групп
+    document.querySelectorAll('.filter-group-header').forEach(h => {
+        h.onclick = () => {
+            const body = h.parentElement.querySelector('.filter-group-body');
+            body.classList.toggle('active');
+            h.classList.toggle('active');
+        };
+    });
+
+    // Выбор сортировки
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        };
+    });
+
+    // Основная функция фильтрации
+    function applyFilters() {
+        const search = document.getElementById('searchInput').value.toLowerCase().trim();
+        const checkedCats = Array.from(document.querySelectorAll('.cat-checkbox:checked')).map(c => c.value);
+        const sortBtn = document.querySelector('.sort-btn.active');
+        const sort = sortBtn ? sortBtn.dataset.sort : 'default';
+        const container = document.getElementById('productsContainer');
+        const cards = Array.from(document.querySelectorAll('.product-card'));
+
+        cards.forEach(card => {
+            const cat = card.dataset.category;
+            const name = card.dataset.name.toLowerCase();
+            const matchCat = checkedCats.length === 0 || checkedCats.includes(cat);
+            const matchSearch = search === '' || name.includes(search);
+            card.style.display = (matchCat && matchSearch) ? '' : 'none';
+        });
+
+        // Сортировка
+        const visible = cards.filter(c => c.style.display !== 'none');
+        if (sort === 'asc') visible.sort((a, b) => +a.dataset.price - +b.dataset.price);
+        else if (sort === 'desc') visible.sort((a, b) => +b.dataset.price - +a.dataset.price);
+
+        // Переставляем DOM-порядок
+        visible.forEach(c => container.appendChild(c));
+
+        // Empty state
+        const emptyMsg = document.querySelector('.empty-catalog');
+        if (visible.length === 0) {
+            if (!emptyMsg) {
+                const msg = document.createElement('div');
+                msg.className = 'empty-catalog';
+                msg.innerHTML = '<p>Товары не найдены</p>';
+                container.appendChild(msg);
+            }
+        } else if (emptyMsg) {
+            emptyMsg.remove();
+        }
+    }
+
+    document.getElementById('applyFiltersBtn').onclick = () => {
+        applyFilters();
+        filterSidebar.classList.remove('active');
+    };
+
+    document.getElementById('resetFilters').onclick = () => {
+        document.querySelectorAll('.cat-checkbox').forEach(c => c.checked = false);
+        document.getElementById('searchInput').value = '';
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.sort-btn[data-sort="default"]').classList.add('active');
+        document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+        filterSidebar.classList.remove('active');
+    };
+
+    // Кнопка наверх + скролл-шапка
+    let btn = document.querySelector('.scroll-top');
+    window.onscroll = function () {
+        if (window.scrollY > 300) btn.style.display = 'flex'; else btn.style.display = 'none';
+        const h = document.querySelector('.site-header');
+        if (window.scrollY > 50) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    };
+    btn.onclick = function () { window.scrollTo({top: 0, behavior: 'smooth'}); return false; };
+</script>
+</body>
+</html>

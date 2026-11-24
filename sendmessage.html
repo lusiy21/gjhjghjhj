@@ -1,0 +1,38 @@
+<?php
+require_once 'config.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $message = trim($_POST['message']);
+    
+    $error = '';
+    
+    if (empty($name) || empty($email) || empty($message)) {
+        $error = 'Заполните все поля';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 'Неверный формат email';
+    } else {
+        $name = mysqli_real_escape_string($connect, $name);
+        $email = mysqli_real_escape_string($connect, $email);
+        $message = mysqli_real_escape_string($connect, $message);
+        
+        $query = "INSERT INTO messages (name, email, message) VALUES ('$name', '$email', '$message')";
+        
+        if (mysqli_query($connect, $query)) {
+            session_start();
+            $_SESSION['msg_sent'] = 'Ваше сообщение отправлено!';
+        } else {
+            $error = 'Ошибка при отправке';
+        }
+    }
+    
+    session_start();
+    if (!empty($error)) {
+        $_SESSION['msg_error'] = $error;
+    }
+    
+    header('Location: contacts.php');
+    exit;
+}
+?>
