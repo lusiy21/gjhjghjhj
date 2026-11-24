@@ -1613,20 +1613,14 @@ html {
 }
 .catalog-hero {
     background-image: url('img/catalog-bg.jpg');
-    
-    /* ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ: */
-    background-size: contain;      /* Картинка вписывается целиком, не обрезается */
+    background-size: contain;      /* Картинка вписывается целиком */
     background-color: #000000;     /* Черный фон по бокам */
-    background-position: center;   /* Картинка по центру */
+    background-position: center;   /* По центру */
     background-repeat: no-repeat;
     
-    height: 600px;                 /* Высота блока (можешь поставить 700px, если хочешь выше) */
-    width: 100vw; 
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    height: 600px;                 /* Высота блока */
+    width: 100%;                   /* Ширина по контейнеру, без вылезания на весь экран */
+    border-radius: 20px;           /* Закругляем углы (если хочешь) */
     margin-bottom: 40px;
     display: flex;
     align-items: center;
