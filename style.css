@@ -1612,12 +1612,14 @@ html {
     text-decoration: line-through;
 }
 .catalog-hero {
-    /* Верхний слой - Террорблейд (contain), нижний слой - фон (cover) */
-    background-image: url('img/catalog-bg.jpg'), url('img/catalog-bg.jpg'); 
-    background-size: contain, cover;
+    /* Накладываем градиент поверх картинки, чтобы скрыть резкие края */
+    background-image: 
+        linear-gradient(to right, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 10%, rgba(10, 10, 10, 0) 25%, rgba(10, 10, 10, 0) 75%, rgba(10, 10, 10, 0.8) 90%, #0a0a0a 100%),
+        url('img/catalog-bg.jpg');
+    background-size: 100% 100%, contain;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
-    background-color: #0a0a0a; /* Темный фон, если картинки не загрузятся */
+    background-color: #0a0a0a;
     
     height: 600px;
     width: 100%;
@@ -1627,6 +1629,7 @@ html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 .catalog-hero::before {
     content: '';
